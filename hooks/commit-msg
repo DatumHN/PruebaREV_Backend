@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Obtiene el mensaje de commit del primer argumento que pasa Git
+COMMIT_MSG_FILE=$1
+
+# Patrón de regex para Conventional Commits (simplificado)
+# Ejemplo: feat: mensaje, fix(scope): mensaje
+CONVENTIONAL_COMMIT_REGEX="^(feat|fix|docs|style|refactor|test|chore|build|ci)(\(.*\))?: .+$"
+
+# Lee el mensaje del archivo
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Valida el mensaje con el regex
+if ! echo "$COMMIT_MSG" | grep -qE "$CONVENTIONAL_COMMIT_REGEX"; then
+    echo "[ERROR] Tu mensaje de commit no sigue el formato de Conventional Commits." >&2
+    echo "       Debe ser algo como: 'feat: descripción' o 'fix(scope): descripción'." >&2
+    exit 1
+fi
+
+exit 0

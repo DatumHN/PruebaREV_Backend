@@ -25,7 +25,7 @@ public class CampoDTO {
   public Integer lonMinima;
   public Integer lonMaxima;
   public CatalogosDTO catalogos;
-  public List<DetalleSolicitudDTOSimple> detalleSolicitudDTOSimple;
+  // public List<DetalleSolicitudDTOSimple> detalleSolicitudDTOSimple;
 
   public CampoDTO() {}
 
@@ -48,10 +48,11 @@ public class CampoDTO {
     if (campo.catalogos != null) {
       this.catalogos = campo.catalogos != null ? new CatalogosDTO(campo.catalogos) : null;
     }
-    if (campo.detallesSolicitudes != null) {
-      this.detalleSolicitudDTOSimple = campo.detallesSolicitudes.stream()
-          .map(DetalleSolicitudDTOSimple::new).collect(Collectors.toList());
-    }
+    /*
+     * if (campo.detallesSolicitudes != null) { this.detalleSolicitudDTOSimple =
+     * campo.detallesSolicitudes.stream()
+     * .map(DetalleSolicitudDTOSimple::new).collect(Collectors.toList()); }
+     */
 
   }
 

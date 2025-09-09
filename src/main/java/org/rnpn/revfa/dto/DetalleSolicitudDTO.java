@@ -10,12 +10,14 @@ public class DetalleSolicitudDTO {
   public String valor;
   public CampoDTO campos;
   public SolicitudDTO solicitud;
+  public Long campoSeccion;
 
   public DetalleSolicitudDTO(DetalleSolicitud detallesSolicitudes) {
     this.id = detallesSolicitudes.id;
     this.valor = detallesSolicitudes.valor;
     this.campos =
         detallesSolicitudes.campos != null ? new CampoDTO(detallesSolicitudes.campos) : null;
+    this.campoSeccion = detallesSolicitudes.campoSeccion;
   }
 
   public DetalleSolicitudDTO() {}

@@ -32,10 +32,14 @@
     <dependencies>
     <dependency>
             <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-micrometer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5-mockito</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5</artifactId>
@@ -56,11 +60,11 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest</artifactId>
         </dependency>
+          <!-- OpenAPI (opcional) -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest-jackson</artifactId>
         </dependency>
-          <!-- OpenAPI (opcional) -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-smallrye-openapi</artifactId>
@@ -87,7 +91,6 @@
     <repositories>
         <repository>
             <releases>
-                <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>false</enabled>
@@ -100,7 +103,6 @@
     <pluginRepositories>
         <pluginRepository>
             <releases>
-                <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>false</enabled>

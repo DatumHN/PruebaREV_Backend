@@ -18,7 +18,7 @@ public class CampoSeccionDTO {
     this.id = campoSeccion.id;
     this.secuencia = campoSeccion.secuencia;
     this.activo = campoSeccion.activo;
-    this.campo = campoSeccion.campo != null ? new CampoDTO(campoSeccion.campo) : null;
+    this.campo = campoSeccion.campos != null ? new CampoDTO(campoSeccion.campos) : null;
 
     if (campoSeccion.rolesPermisosCamposSecciones != null) {
       this.rolesPermisos = campoSeccion.rolesPermisosCamposSecciones.stream()

@@ -59,8 +59,8 @@ public class Campo extends PanacheEntityBase {
   @Column(name = "longitud_maxima")
   public Integer lonMaxima;
 
-  @OneToMany(mappedBy = "campo", fetch = FetchType.EAGER)
-  public Set<CampoSeccion> camposSecciones;
+  @OneToMany(mappedBy = "campos", fetch = FetchType.EAGER)
+  public List<CampoSeccion> camposSecciones;
 
   @OneToMany(mappedBy = "campos", fetch = FetchType.EAGER)
   public List<DetalleSolicitud> detallesSolicitudes;

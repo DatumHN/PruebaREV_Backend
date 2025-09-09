@@ -32,5 +32,6 @@ public class SolicitudDTO {
         solicitudes.tipoDocumento != null ? new TipoDocumentoDTO(solicitudes.tipoDocumento) : null;
     this.detallesSolicitudes = solicitudes.detallesSolicitudes.stream()
         .map(DetalleSolicitudDTO::new).collect(Collectors.toList());
+
   }
 }

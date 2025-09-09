@@ -27,4 +27,7 @@ public class ValoresCatalogos {
 
   @OneToMany(mappedBy = "valoresCatalogos", fetch = FetchType.EAGER)
   public List<AtributosValoresCatalogos> atributosValoresCatalogos;
+
+  @OneToMany(mappedBy = "valoresCatalogos", fetch = FetchType.EAGER)
+  public List<DetalleSolicitud> detalleSolicitudes;
 }

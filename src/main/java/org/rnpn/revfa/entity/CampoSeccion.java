@@ -22,9 +22,9 @@ public class CampoSeccion extends PanacheEntityBase {
   @OneToMany(mappedBy = "campoSeccion", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   public Set<RolPermisoCampoSeccion> rolesPermisosCamposSecciones;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "id_campo")
-  public Campo campo;
+  public Campo campos;
 
   @ManyToOne
   @JoinColumn(name = "id_seccion")

@@ -227,6 +227,9 @@
                             <version>1.5.5.Final</version>
                         </path>
                     </annotationProcessorPaths>
+					<rulesets>
+						<ruleset>config/pmd/pmd-ruleset.xml</ruleset>
+					</rulesets>
                 </configuration>
             </plugin>
             <plugin>

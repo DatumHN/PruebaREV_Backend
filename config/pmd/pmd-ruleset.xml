@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0">
+  <!-- Permitir nombres cortos comunes -->
+  <rule ref="category/java/codestyle.xml/ShortVariable">
+    <properties>
+      <property name="violationSuppressRegex" value="^id$|^ip$|^url$"/>
+    </properties>
+  </rule>
+
+  <!-- Relajar longitud de variables -->
+  <rule ref="category/java/codestyle.xml/LongVariable">
+    <properties>
+      <property name="maximum" value="25"/>
+    </properties>
+  </rule>
+
+  <!-- Desactivar reglas de diseño en DTOs -->
+  <exclude-pattern>.*/dto/.*</exclude-pattern>
+  <rule ref="category/java/design.xml/DataClass"/>
+  <rule ref="category/java/design.xml/TooManyFields"/>
+  <rule ref="category/java/design.xml/LawOfDemeter"/>
+</ruleset>
